@@ -24,7 +24,8 @@ class HelloHandler(BaseHTTPRequestHandler):
 
 
 if __name__ == '__main__':
-    server_address = ('', 8000) # serve all the addresses, on port 8000
+    port_no = 8000
+    server_address = ('', port_no) # serve all the addresses, on port 8000
     http_server = HTTPServer(server_address, HelloHandler)
     http_server.serve_forever()
 
